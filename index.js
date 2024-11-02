@@ -19,16 +19,12 @@ console.log(capitalize('World'))  // Output: 'World'
 
 console.log(capitalize('wALmYr')) // Output: 'Walmyr'
 
-function separateWords(...words) {
-  return words.join(' ').split(' ')
+function capitalizedWords(...words) {
+  return words
+    .join(' ') // Combine the input words into a single string
+    .split(' ') // Split them into an array of words
+    .map(word => capitalize(word)) // Capitalize each word
+    .join(' '); // Join them back into a single string with spaces
 }
 
-const words = separateWords('walmyr lima e silva filho')
-
-capitalizedWords = words.map(word => {
-  return capitalize(word)
-})
-
-const combinedStrings = capitalizedWords.join(' ')
-
-console.log(combinedStrings) // Output: 'Walmyr Lima E Silva Filho'
+console.log(capitalizedWords('walmyr lima e silva filho')) // Output: 'Walmyr Lima E Silva Filho'
