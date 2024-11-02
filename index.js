@@ -19,9 +19,8 @@ console.log(capitalize('World'))  // Output: 'World'
 
 console.log(capitalize('wALmYr')) // Output: 'Walmyr'
 
-function capitalizedWords(...words) {
+function capitalizedWords(words) {
   return words
-    .join(' ') // Combine the input words into a single string
     .split(' ') // Split them into an array of words
     .map(word => capitalize(word)) // Capitalize each word
     .join(' '); // Join them back into a single string with spaces
