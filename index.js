@@ -23,7 +23,7 @@ function capitalizedWords(words) {
   return words
     .split(' ') // Split them into an array of words
     .map(word => capitalize(word)) // Capitalize each word
-    .join(' '); // Join them back into a single string with spaces
+    .join(' '); // Join them back into a single string with spaces in between
 }
 
 console.log(capitalizedWords('walmyr lima e silva filho')) // Output: 'Walmyr Lima E Silva Filho'
